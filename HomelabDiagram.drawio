@@ -1,26 +1,83 @@
-<mxfile host="app.diagrams.net" modified="2024-01-11T18:18:46.969Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="6BdjPZ8LCm3_oG0h8aIq" version="21.6.5" type="github">
+<mxfile host="Electron" modified="2024-01-11T18:44:45.051Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.18 Chrome/120.0.6099.199 Electron/28.1.2 Safari/537.36" etag="mme-ML75pwJLis2G4EVB" version="22.1.18" type="device">
   <diagram name="Page-1" id="WkWyxcvuHecFeF9vWdtm">
-    <mxGraphModel dx="683" dy="351" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="797" dy="464" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="ejTJkkPJhUkFEx7tDeuq-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ejTJkkPJhUkFEx7tDeuq-1" target="ejTJkkPJhUkFEx7tDeuq-3">
+        <mxCell id="NKnknl26S_bkIEfBFu68-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="ejTJkkPJhUkFEx7tDeuq-1" target="ejTJkkPJhUkFEx7tDeuq-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="ejTJkkPJhUkFEx7tDeuq-1" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.cloud;" vertex="1" parent="1">
-          <mxGeometry x="40" y="80" width="50" height="30" as="geometry" />
+        <mxCell id="ejTJkkPJhUkFEx7tDeuq-1" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.cloud;" parent="1" vertex="1">
+          <mxGeometry x="40" y="75" width="50" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ejTJkkPJhUkFEx7tDeuq-2" value="&lt;h1&gt;Physical&lt;/h1&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="ejTJkkPJhUkFEx7tDeuq-2" value="&lt;h1&gt;Physical&lt;/h1&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=4" parent="1" vertex="1">
           <mxGeometry width="120" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="ejTJkkPJhUkFEx7tDeuq-3" value="BT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="45" y="140" width="40" height="40" as="geometry" />
+        <mxCell id="ejTJkkPJhUkFEx7tDeuq-3" value="BT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=2;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="45" y="135" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ejTJkkPJhUkFEx7tDeuq-9" value="&lt;b style=&quot;font-size: 10px;&quot;&gt;Lenovo Tiny&lt;br style=&quot;font-size: 10px;&quot;&gt;M93p&lt;/b&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=left;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;labelPosition=right;verticalLabelPosition=middle;verticalAlign=middle;labelBackgroundColor=none;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="150" y="70" width="28.000000000000004" height="50" as="geometry" />
+        <mxCell id="NKnknl26S_bkIEfBFu68-5" value="" style="endArrow=none;html=1;strokeWidth=1;rounded=0;fillColor=#b1ddf0;strokeColor=#10739e;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="140" as="sourcePoint" />
+            <mxPoint x="510" y="140" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="ejTJkkPJhUkFEx7tDeuq-10" value="Custom" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=left;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;fontSize=10;labelBackgroundColor=none;labelPosition=right;verticalLabelPosition=middle;verticalAlign=middle;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="150" y="160" width="28.000000000000004" height="50" as="geometry" />
+        <mxCell id="NKnknl26S_bkIEfBFu68-6" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1;rounded=0;fillColor=#b1ddf0;strokeColor=#10739e;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="210" as="sourcePoint" />
+            <mxPoint x="250" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NKnknl26S_bkIEfBFu68-7" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1;rounded=0;fillColor=#b1ddf0;strokeColor=#10739e;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="210" as="sourcePoint" />
+            <mxPoint x="340" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NKnknl26S_bkIEfBFu68-8" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1;rounded=0;fillColor=#b1ddf0;strokeColor=#10739e;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="210" as="sourcePoint" />
+            <mxPoint x="410" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NKnknl26S_bkIEfBFu68-9" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1;rounded=0;fillColor=#647687;strokeColor=#1BA1E2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="210" as="sourcePoint" />
+            <mxPoint x="500" y="70" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NKnknl26S_bkIEfBFu68-12" value="" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#1BA1E2;fillColor=#1BA1E2;labelPosition=right;verticalLabelPosition=middle;verticalAlign=middle;align=left;outlineConnect=0;shape=mxgraph.veeam.cpu;fontColor=#ffffff;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="283" y="56.8" width="25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="NKnknl26S_bkIEfBFu68-16" value="" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#1BA1E2;fillColor=#1BA1E2;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.ram;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="361" y="61.699999999999996" width="29.19" height="15.2" as="geometry" />
+        </mxCell>
+        <mxCell id="NKnknl26S_bkIEfBFu68-19" value="Lenovo Tiny&lt;br&gt;M93p" style="outlineConnect=0;dashed=0;verticalLabelPosition=middle;verticalAlign=middle;align=center;html=1;shape=mxgraph.aws3.traditional_server;fillColor=#1BA1E2;gradientColor=none;shadow=0;labelBackgroundColor=none;strokeColor=default;spacingTop=3;fontFamily=Helvetica;fontSize=10;fontColor=default;labelPosition=right;fontStyle=1;spacing=8;spacingRight=-41;" vertex="1" parent="1">
+          <mxGeometry x="146" y="90" width="29.52" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NKnknl26S_bkIEfBFu68-20" value="Custom" style="outlineConnect=0;dashed=0;verticalLabelPosition=middle;verticalAlign=middle;align=center;html=1;shape=mxgraph.aws3.traditional_server;fillColor=#1BA1E2;gradientColor=none;shadow=0;labelBackgroundColor=none;strokeColor=default;spacingTop=3;fontFamily=Helvetica;fontSize=10;fontColor=default;labelPosition=right;fontStyle=1;spacing=8;spacingRight=-41;" vertex="1" parent="1">
+          <mxGeometry x="146" y="150" width="29.52" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NKnknl26S_bkIEfBFu68-25" value="&lt;b style=&quot;color: rgb(255, 255, 255); font-size: 12px; text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;I5-4570T&lt;/font&gt;&lt;br&gt;&lt;/b&gt;&lt;font style=&quot;color: rgb(255, 255, 255); text-align: left; font-size: 8px;&quot;&gt;4 CPUs&lt;br&gt;2.9 GHz&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="263" y="85" width="60" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="NKnknl26S_bkIEfBFu68-28" value="&lt;b style=&quot;color: rgb(255, 255, 255); font-size: 12px; text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;I7-4770&lt;/font&gt;&lt;br&gt;&lt;/b&gt;&lt;font style=&quot;color: rgb(255, 255, 255); text-align: left; font-size: 8px;&quot;&gt;8 CPUs&lt;br&gt;3.4 GHz&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="263" y="150" width="60" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="NKnknl26S_bkIEfBFu68-29" value="12 GB" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="345" y="85" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NKnknl26S_bkIEfBFu68-30" value="16 GB" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=10;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="345" y="150" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NKnknl26S_bkIEfBFu68-31" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#1BA1E2;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.hard_disk;labelBackgroundColor=none;spacingTop=3;fontFamily=Helvetica;fontSize=10;fontColor=default;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="444.25" y="54.824999999999996" width="22.75" height="28.95" as="geometry" />
+        </mxCell>
+        <mxCell id="NKnknl26S_bkIEfBFu68-33" value="SSD: 240 GB" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="415.63" y="89" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="NKnknl26S_bkIEfBFu68-34" value="SSD: 240 GB&lt;br&gt;HDD: 1 TB&lt;br&gt;HDD: 500 GB&lt;br&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;HDD: 500 GB&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=8;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="425" y="145" width="70" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
