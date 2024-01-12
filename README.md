@@ -15,20 +15,19 @@ or \
 
 (may need sudo for above..)
 
-<br>
 
 ## Networking Server
 
 ✅ Docker
 
-Download the Docker Compose for the networking server:
+Then run these commands:
 
-`wget  -O /docker/docker-compose.yml "https://raw.githubusercontent.com/ssmithy/Homelab/main/docker-compose.networking.yml"`
+    # Download the docker compose file for networking and rename on client
+    wget  -O /docker/docker-compose.yml "https://raw.githubusercontent.com/ssmithy/Homelab/main/docker-compose.networking.yml"
 
-
-
-
-
+    # Change directory to download location and run the services
+    cd /docker/
+    docker compose up
 
 
 
