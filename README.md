@@ -30,7 +30,7 @@ Then run these commands:
     cd /docker/
 
     # Run the services
-    docker compose up
+    docker compose up -d
 
 
 
