@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  nginxproxymanager:
+    container_name: 'nginx'
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '81:81'
+      - '443:443'
+    volumes:
+      - /docker/appdata/nginx/data:/data
+      - /docker/appdata/letsencrypt:/etc/letsencrypt
