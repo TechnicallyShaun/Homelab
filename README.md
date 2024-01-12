@@ -23,7 +23,7 @@ or \
 Then run these commands:
 
     # Download the docker compose file for networking and rename on client
-    wget  -O /docker/docker-compose.yml "https://raw.githubusercontent.com/ssmithy/Homelab/main/docker-compose.networking.yml"
+    sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/docker-compose.networking.yml --create-dirs -o /docker/docker-compose.yml
 
     # Change directory to download location and run the services
     cd /docker/
