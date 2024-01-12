@@ -18,15 +18,18 @@ or \
 
 ## Networking Server
 
-✅ Docker
+✅ Install Docker
 
 Then run these commands:
 
     # Download the docker compose file for networking and rename on client
     sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/docker-compose.networking.yml --create-dirs -o /docker/docker-compose.yml
 
-    # Change directory to download location and run the services
+    # Claim the directory and change to it
+    sudo chown -R $USER:$USER /docker
     cd /docker/
+
+    # Run the services
     docker compose up
 
 
