@@ -9,12 +9,7 @@ Common configuration for each server.
 ### Docker
 On each of our machines that need it, Docker can be installed by running the following script:
 
-`source <(curl -s https://raw.githubusercontent.com/ssmithy/Homelab/main/InstallDocker.sh)` \
-or \
-`curl -s https://raw.githubusercontent.com/ssmithy/Homelab/main/InstallDocker.sh | bash -s`
-
-(may need sudo for above..)
-
+`source <(curl -s https://raw.githubusercontent.com/ssmithy/Homelab/main/InstallDocker.sh)`
 
 ## Networking Server
 
@@ -30,7 +25,7 @@ Then run these commands:
     cd /docker/
 
     # Run the services
-    docker compose up -d
+    sudo docker compose up -d
 
 
 
