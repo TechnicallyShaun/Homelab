@@ -7,7 +7,7 @@ Common configuration for each server.
 ✅ [Install Ubuntu Server](https://ubuntu.com/download/server)
 
 ### Docker
-On each of our machines that need it, Docker can be installed by running the following script:
+On each machine that needs it, Docker can be installed by running the following script:
 
 `source <(curl -s https://raw.githubusercontent.com/ssmithy/Homelab/main/InstallDocker.sh)`
 
@@ -15,7 +15,7 @@ On each of our machines that need it, Docker can be installed by running the fol
 
 ✅ Install Docker
 
-Then run these commands:
+Then run these commands to setup Docker Compose services:
 
     # Download the docker compose file for networking and rename on client
     sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/docker-compose.networking.yml --create-dirs -o /docker/docker-compose.yml
