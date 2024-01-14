@@ -53,6 +53,11 @@ https://www.reddit.com/r/nginxproxymanager/comments/166fbka/certbot_renew_intern
     # Run the services
     sudo docker compose up -d
 
+## Utilites Server
+
+✅ Install Docker
+
+
 
 
 <br><br>
