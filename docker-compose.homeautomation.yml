@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+    homeassistant:
+      container_name: homeassistant
+      image: "ghcr.io/home-assistant/home-assistant:stable"
+      volumes:
+        - /docker/appdata/homeassistant/config:/config
+        - /etc/localtime:/etc/localtime:ro
+        - /run/dbus:/run/dbus:ro
+      restart: unless-stopped
+      privileged: true
+
+# # This should be from self hosted repo after a build
+#   netdaemon:
+#     container_name: netdaemon4
+#     image: netdaemon/netdaemon4
+#     restart: unless-stopped
+#     environment:
+#       - HomeAssistant__Host=your_ip_or_hostname
+#       - HomeAssistant__Token=your_token
+#       - NetDaemon__ApplicationAssembly=NetDaemonApps.dll
+#       - Logging__LogLevel__Default=Information
+#       - TZ=Etc/UTC
+#     volumes:
+#       - /docker/appdata/netdaemon:/data
