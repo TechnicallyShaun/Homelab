@@ -27,6 +27,16 @@ Then run these commands:
     # Run the services
     sudo docker compose up -d
 
+After installing NGINX GoDaddy seems to brick the Add Certificate function. Following this post resolves the issue:
+
+https://www.reddit.com/r/nginxproxymanager/comments/166fbka/certbot_renew_internal_error/jze9sgw/?context=3
+
+## Home Automation Server
+
+✅ Install Docker
+
+
+
 
 
 <br><br>
