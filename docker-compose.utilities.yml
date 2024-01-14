@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  dockerregistry:
+    container_name: registry
+    image: registry
+    restart: unless-stopped
+    ports:
+    - "5000:5000"
+    environment:
+      REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data
+    volumes:
+      - /docker/appdata/registry:/data
