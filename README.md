@@ -57,6 +57,15 @@ https://www.reddit.com/r/nginxproxymanager/comments/166fbka/certbot_renew_intern
 
 ✅ Install Docker
 
+    # Download the docker compose file for home automation services and rename on client
+    sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/docker-compose.utilities.yml --create-dirs -o /docker/docker-compose.yml
+
+    # Claim the directory and change to it
+    sudo chown -R $USER:$USER /docker
+    cd /docker/
+
+    # Run the services
+    sudo docker compose up -d
 
 
 
