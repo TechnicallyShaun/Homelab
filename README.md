@@ -17,6 +17,8 @@ On each of our machines that need it, Docker can be installed by running the fol
 
 `git config --global user.email EMAIL`
 
+`git config --global pull.rebase false`
+
 ## Networking Server
 
 ✅ Install Docker
