@@ -1,5 +1,5 @@
 # Homelab
-> A bunch of scripts and helpers to setup a home lab.
+> Instructions, scripts and helpers to setup a home lab.
 
 ## Server
 Common configuration for each server.
@@ -35,7 +35,7 @@ https://www.reddit.com/r/nginxproxymanager/comments/166fbka/certbot_renew_intern
 
 ✅ Install Docker
 
-    # Download the docker compose file for networking and rename on client
+    # Download the docker compose file for home automation services and rename on client
     sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/docker-compose.homeautomation.yml --create-dirs -o /docker/docker-compose.yml
 
     # Claim the directory and change to it
