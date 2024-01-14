@@ -1,0 +1,144 @@
+version: "3.7"
+services:
+  radarr:
+    container_name: radarr
+    image: ghcr.io/hotio/radarr
+    restart: unless-stopped
+    logging:
+        driver: json-file
+    ports:
+      - "7878:7878"
+    environment:
+      - PUID=1000 
+      - PGID=1000 
+      - UMASK=002 
+      - TZ=Europe/London 
+    volumes: 
+      - /docker/appdata/radarr:/config 
+      - /storage/media-centre:/storage/media-centre 
+  sonarr: 
+    container_name: sonarr 
+    image: ghcr.io/hotio/sonarr 
+    restart: unless-stopped 
+    logging: 
+        driver: json-file 
+    ports: 
+      - "8989:8989" 
+    environment: 
+      - PUID=1000 
+      - PGID=1000 
+      - UMASK=002 
+      - TZ=Europe/London 
+    volumes: 
+      - /docker/appdata/sonarr:/config 
+      - /storage/media-centre:/storage/media-centre 
+  lidarr: 
+    container_name: lidarr 
+    image: ghcr.io/hotio/lidarr 
+    restart: unless-stopped 
+    logging: 
+        driver: json-file 
+    ports: 
+      - "8686:8686" 
+    environment: 
+      - PUID=1000 
+      - PGID=1000 
+      - UMASK=002 
+      - TZ=Europe/London 
+    volumes: 
+      - /docker/appdata/lidarr:/config 
+      - /storage/media-centre:/storage/media-centre 
+  readarr: 
+    container_name: readarr 
+    image: ghcr.io/hotio/readarr 
+    restart: unless-stopped 
+    logging: 
+        driver: json-file 
+    ports: 
+      - "8787:8787" 
+    environment: 
+      - PUID=1000 
+      - PGID=1000 
+      - UMASK=002 
+      - TZ=Europe/London 
+    volumes: 
+      - /docker/appdata/readarr:/config 
+      - /storage/media-centre:/storage/media-centre 
+  bazarr: 
+    container_name: bazarr 
+    image: ghcr.io/hotio/bazarr 
+    restart: unless-stopped 
+    logging: 
+        driver: json-file 
+    ports: 
+      - "6767:6767" 
+    environment: 
+      - PUID=1000 
+      - PGID=1000 
+      - UMASK=002 
+      - TZ=Europe/London 
+    volumes: 
+      - /docker/appdata/bazarr:/config 
+      - /storage/media-centre:/storage/media-centre 
+  qbittorrent: 
+    container_name: qbittorrent 
+    image: ghcr.io/hotio/qbittorrent 
+    restart: unless-stopped 
+    logging: 
+        driver: json-file 
+    ports: 
+      - "8080:8080" 
+    environment: 
+      - PUID=1000 
+      - PGID=1000 
+      - UMASK=002 
+      - TZ=Europe/London 
+    volumes: 
+      - /docker/appdata/qbittorrent:/config 
+      - /storage/media-centre/torrents:/storage/media-centre/torrents 
+  prowlarr:
+    container_name: prowlarr 
+    image: ghcr.io/hotio/prowlarr 
+    restart: unless-stopped 
+    logging: 
+        driver: json-file 
+    ports: 
+      - "9696:9696" 
+    environment: 
+      - PUID=1000 
+      - PGID=1000 
+      - UMASK=002 
+      - TZ=Europe/London 
+    volumes: 
+      - /docker/appdata/prowlarr:/config 
+  jellyfin:
+    container_name: jellyfin 
+    image: ghcr.io/hotio/jellyfin 
+    restart: unless-stopped 
+    logging: 
+        driver: json-file 
+    ports: 
+      - "8096:8096" 
+    environment: 
+      - PUID=1000 
+      - PGID=1000 
+      - UMASK=002 
+      - TZ=Europe/London 
+    volumes: 
+      - /docker/appdata/jellyfin:/config 
+      - /storage/media-centre/media:/storage/media-centre/media 
+  jellyseerr: 
+    container_name: jellyseerr 
+    image: ghcr.io/hotio/jellyseerr 
+    restart: unless-stopped 
+    logging: 
+        driver: json-file 
+    ports: 
+      - "5055:5055" 
+    environment: 
+      - PUID=1000 
+      - PGID=1000 
+      - UMASK=002 
+      - TZ=Europe/London 
+    volumes: 
+      - /docker/appdata/jellyseerr:/config 
