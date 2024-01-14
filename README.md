@@ -11,6 +11,12 @@ On each of our machines that need it, Docker can be installed by running the fol
 
 `source <(curl -s https://raw.githubusercontent.com/ssmithy/Homelab/main/InstallDocker.sh)`
 
+### Git Config
+
+`git config --global user.name Smithy`
+
+`git config --global user.email EMAIL`
+
 ## Networking Server
 
 ✅ Install Docker
