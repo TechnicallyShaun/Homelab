@@ -22,6 +22,6 @@ services:
 #       - HomeAssistant__Token=your_token
 #       - NetDaemon__ApplicationAssembly=NetDaemonApps.dll
 #       - Logging__LogLevel__Default=Information
-#       - TZ=Etc/UTC
+#       - TZ=Europe/London
 #     volumes:
 #       - /docker/appdata/netdaemon:/data
