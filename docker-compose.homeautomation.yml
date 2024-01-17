@@ -17,11 +17,11 @@ services:
       container_name: netdaemon4
       image: netdaemon/netdaemon4
       restart: unless-stopped
-      # environment:
-      #   - HomeAssistant__Host=your_ip_or_hostname
-      #   - HomeAssistant__Token=your_token
-      #   - NetDaemon__ApplicationAssembly=NetDaemonApps.dll
-      #   - Logging__LogLevel__Default=Information
-      #   - TZ=Europe/London
+      environment:
+        - HomeAssistant__Host=${HomeAssistant__Host}
+        - HomeAssistant__Token=${HomeAssistant__Token}
+        - NetDaemon__ApplicationAssembly=NetDaemonApps.dll
+        - Logging__LogLevel__Default=${Logging__LogLevel__Default}
+        - TZ=${TZ}
       volumes:
         - /docker/appdata/netdaemon:/data
