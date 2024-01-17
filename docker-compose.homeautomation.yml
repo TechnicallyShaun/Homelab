@@ -1,4 +1,5 @@
 version: '3.7'
+
 services:
     homeassistant:
       container_name: homeassistant
@@ -12,16 +13,15 @@ services:
       restart: unless-stopped
       privileged: true
 
-# # This should be from self hosted repo after a build
-#   netdaemon:
-#     container_name: netdaemon4
-#     image: netdaemon/netdaemon4
-#     restart: unless-stopped
-#     environment:
-#       - HomeAssistant__Host=your_ip_or_hostname
-#       - HomeAssistant__Token=your_token
-#       - NetDaemon__ApplicationAssembly=NetDaemonApps.dll
-#       - Logging__LogLevel__Default=Information
-#       - TZ=Europe/London
-#     volumes:
-#       - /docker/appdata/netdaemon:/data
+    netdaemon:
+      container_name: netdaemon4
+      image: netdaemon/netdaemon4
+      restart: unless-stopped
+      # environment:
+      #   - HomeAssistant__Host=your_ip_or_hostname
+      #   - HomeAssistant__Token=your_token
+      #   - NetDaemon__ApplicationAssembly=NetDaemonApps.dll
+      #   - Logging__LogLevel__Default=Information
+      #   - TZ=Europe/London
+      volumes:
+        - /docker/appdata/netdaemon:/data
