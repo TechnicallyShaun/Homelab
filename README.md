@@ -74,6 +74,14 @@ Replace the values in the .env file, and run:
 
 
 
+### Net Daemon Updater
+
+✅ Install jq `sudo apt-get install jq -y`
+✅ Install unzip `sudo apt-get install unzip`
+
+`sudo bash ./UpdateNetDaemon.sh`
+
+
 <br><br>
 <br><br>
 <br><br>
