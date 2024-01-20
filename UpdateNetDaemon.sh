@@ -80,17 +80,20 @@ read -r -d '' apiLatest << EOM
 EOM
 #apiLatest=$(curl -s https://api.github.com/repos/${user}/${repo}/releases/latest)
 
-releaseUrl=$(jq -r .tag_name <<< $apiLatest)
-echo 'Current Version:' $releaseUrl
+releaseTag=$(jq -r .tag_name <<< $apiLatest)
+echo 'Current Version:' $releaseTag
 
 assetDownloadUrl=$(jq -r .assets[0].browser_download_url <<< $apiLatest)
 #echo 'Download URL:' $assetDownloadUrl
 
+#if list of folders does not contain releaseTag
+# do update routine
+
 #TODO: delete x older folders
 
 #create a new folder
-mkdir ./$releaseUrl
-cd $releaseUrl
+mkdir ./$releaseTag
+cd $releaseTag
 #download and extract publish.zip
 curl -LO $assetDownloadUrl
 unzip -o publish.zip
