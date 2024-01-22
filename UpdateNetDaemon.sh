@@ -1,6 +1,9 @@
 user="ssmithy";
 repo="NetDaemon";
 
+ssh_user=shaun
+ssh_server='192.168.1.107'
+
 #avoid spamming error
 read -r -d '' apiLatest << EOM
 {
@@ -86,7 +89,7 @@ echo 'Current Version:' $releaseTag
 assetDownloadUrl=$(jq -r .assets[0].browser_download_url <<< $apiLatest)
 #echo 'Download URL:' $assetDownloadUrl
 
-#if list of folders does not contain releaseTag
+#TODO: if list of folders does not contain releaseTag
 # do update routine
 
 #TODO: delete x older folders
@@ -96,9 +99,9 @@ mkdir ./$releaseTag
 cd $releaseTag
 #download and extract publish.zip
 curl -LO $assetDownloadUrl
-unzip -o publish.zip
-rm publish.zip
 
-#ssh into automation server? / Cert instructions in readme
-#copy files to run dir
-#restart service
+# Copy the published artifact to server
+scp -r publish.zip $ssh_user@$ssh_server:/docker/appdata/netdaemon 
+# Unpack and reload
+ssh -t $ssh_user@$ssh_server unzip -o /docker/appdata/netdaemon/publish
+ssh -t $ssh_user@$ssh_server docker restart netdaemon4
