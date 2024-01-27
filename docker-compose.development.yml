@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+
+  dev-sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest 
+    container_name: sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
+    ports:
+      - "1433:1433"
+    volumes:
+      - /docker/appdata/sqlserver/data:/var/opt/mssql/data 

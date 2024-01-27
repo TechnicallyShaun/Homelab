@@ -117,7 +117,9 @@ I like to use a VM as a development machine. It's easier to setup, tear down and
 ✅ Docker Compose config (Section above)
 
     sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/docker-compose.development.yml --create-dirs -o /docker/docker-compose.yml
-
+    
+    # Download environment vars file
+    sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/homeautomation.env --create-dirs -o /docker/.env
 
 
 <br><br>
