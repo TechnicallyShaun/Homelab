@@ -3,10 +3,11 @@ version: "3.7"
 services:
   devsqlserver:
     container_name: sqlserver
-    image: mcr.microsoft.com/mssql/server:2022-latest 
+    image: mcr.microsoft.com/mssql/server:2019-latest  
     environment:
       - ACCEPT_EULA=Y
       - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
+      - MSSQL_PID=Express
     ports:
       - "1433:1433"
     volumes:
