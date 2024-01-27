@@ -107,6 +107,19 @@ Configure SSH Private/Public Key authentication between local server and remote 
     ssh user@server
 
 
+## Development Machine
+I like to use a VM as a development machine. It's easier to setup, tear down and to port in from remote devices.
+
+✅ Install Docker Desktop
+
+✅ Install VS Code
+
+✅ Docker Compose config (Section above)
+
+    sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/docker-compose.development.yml --create-dirs -o /docker/docker-compose.yml
+
+
+
 <br><br>
 <br><br>
 <br><br>
