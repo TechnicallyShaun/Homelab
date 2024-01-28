@@ -80,6 +80,9 @@ It's easier to transfer the zip to this server and then unpack, so installing un
 
     sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/docker-compose.utilities.yml --create-dirs -o /docker/docker-compose.yml
 
+    # Download config for ddns updater
+    sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/ddnsupdater.config.json --create-dirs -o /docker/appdata/ddnsupdater/data/config.json
+
 ### Net Daemon Updater
 Several packages and configuration are required to allow the updater script to run:
 
