@@ -1,0 +1,12 @@
+{
+    "settings": [
+      {
+        "provider": "godaddy",
+        "domain": "domain.com",
+        "host": "@",
+        "key": "key",
+        "secret": "secret",
+        "ip_version": "ipv4"
+      }
+    ]
+  }
