@@ -83,18 +83,28 @@ It's easier to transfer the zip to this server and then unpack, so installing un
     # Download config for ddns updater
     sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/ddnsupdater.config.json --create-dirs -o /docker/appdata/ddnsupdater/data/config.json
 
+## GitHub Runner Server
+After building and testing code on GitHub we will need to deploy to our local environment.
+
+There's many ways to do this, we could:
+
+- Deploy to local Docker Registry
+- Custom Eventing system e.g. WebHook reciever or MQTT
+- Selfhosted GitHub runner
+
+This server focuses on the selfhosted GitHub runner solution, due to ease of use and seamless experience.
+
 ### Net Daemon Updater
-Several packages and configuration are required to allow the updater script to run:
+Net Daemon updater is built using a Github selfhosted runner.
 
-✅ Install jq `sudo apt-get install jq -y`
+✅ [Install Runner](https://github.com/ssmithy/NetDaemon/settings/actions/runners/new)
 
-✅ Install unzip `sudo apt-get install unzip -y`
+- During installation make sure to give a unique label, so we can install multiple runners.
 
-This script can be called periodically, or via push notification, (TODO: and will check for a new version before updating)
+The [Continuous Deployment Workflow](https://github.com/ssmithy/NetDaemon/blob/main/.github/workflows/CD.yml) will then handle deployment to the Automation Server.
 
-> This script requires permissions on local and remote.
+> Ensure that SSH Public Key Auth is configured between Runner and Automation servers.
 
-    sudo bash ./UpdateNetDaemon.sh
 
 ### SSH Public Key Authentication
 Configure SSH Private/Public Key authentication between local server and remote server (i.e. Utilities -> Automation):
@@ -123,14 +133,3 @@ I like to use a VM as a development machine. It's easier to setup, tear down and
 
     # Download environment vars file
     sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/development.env --create-dirs -o /docker/.env
-
-
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-
-## Notes
-### Scripts
-This script can be used for passing parameters to the script
-`curl -s https://raw.githubusercontent.com/ssmithy/Homelab/main/InstallDocker.sh | bash -s arg1 arg2`
