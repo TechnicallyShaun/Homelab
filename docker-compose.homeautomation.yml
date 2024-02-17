@@ -20,7 +20,7 @@ services:
       environment:
         - HomeAssistant__Host=${HomeAssistant__Host}
         - HomeAssistant__Token=${HomeAssistant__Token}
-        - NetDaemon__ApplicationAssembly=NetDaemon.dll
+        - NetDaemon__ApplicationAssembly=NetDaemonApps.dll
         - Logging__LogLevel__Default=${Logging__LogLevel__Default}
         - TZ=${TZ}
       volumes:
