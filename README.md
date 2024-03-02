@@ -133,3 +133,23 @@ I like to use a VM as a development machine. It's easier to setup, tear down and
 
     # Download environment vars file
     sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/development.env --create-dirs -o /docker/.env
+
+
+# Testing
+Here's some scripts I'm currently testing with:
+
+### Budget Apps
+
+    # Download the docker compose file and rename for convention
+    sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/docker-compose.testing.yml --create-dirs -o /docker/docker-compose.yml
+    
+    # Download environment vars files
+    sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/firefly.env --create-dirs -o /docker/.env
+    sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/firefly.db.env --create-dirs -o /docker/.db.env
+    sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/firefly.importer.env --create-dirs -o /docker/.importer.env
+    sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/huginn.mysql.env --create-dirs -o /docker/.mysql.env
+    sudo curl https://raw.githubusercontent.com/ssmithy/Homelab/main/huginn.secrets.env --create-dirs -o /docker/.secrets.env
+
+    # Run the services
+    cd /docker/
+    sudo docker compose up -d
