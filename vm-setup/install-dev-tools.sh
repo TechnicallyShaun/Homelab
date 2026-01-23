@@ -10,9 +10,10 @@ echo "=========================================="
 # Git config
 echo ""
 echo "[1/4] Configuring Git..."
+read -p "Enter your email address for git: " GIT_EMAIL
 git config --global user.name "Shaun"
-git config --global user.email "me@technicallyshaun.com"
-echo "Git configured: Shaun <me@technicallyshaun.com>"
+git config --global user.email "$GIT_EMAIL"
+echo "Git configured: Shaun <$GIT_EMAIL>"
 
 # tmux
 echo ""
@@ -63,7 +64,7 @@ echo "Development Tools Installation Complete!"
 echo "=========================================="
 echo ""
 echo "Configured/Installed:"
-echo "  - git (configured as Shaun <me@technicallyshaun.com>)"
+echo "  - git (configured as Shaun <$GIT_EMAIL>)"
 echo "  - tmux (terminal multiplexer)"
 echo "  - go (Go programming language)"
 echo "  - gh (GitHub CLI)"
