@@ -14,6 +14,9 @@ curl -fsSL https://raw.githubusercontent.com/TechnicallyShaun/Homelab/main/vm-se
 
 # 3. Set up bash aliases and MOTD
 curl -fsSL https://raw.githubusercontent.com/TechnicallyShaun/Homelab/main/vm-setup/setup-profile.sh -o /tmp/setup-profile.sh && bash /tmp/setup-profile.sh
+
+# Re-run/fix profile setup (cleans up old MOTD files first)
+sudo rm -f /etc/motd /etc/motd.tail /run/motd.dynamic && curl -fsSL https://raw.githubusercontent.com/TechnicallyShaun/Homelab/main/vm-setup/setup-profile.sh -o /tmp/setup-profile.sh && bash /tmp/setup-profile.sh
 ```
 
 ## Run Locally
