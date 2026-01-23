@@ -1,7 +1,11 @@
 #!/bin/bash
 # Setup bash profile with AI CLI aliases and custom MOTD
+# Re-running this script will overwrite previous settings
 
 set -e
+
+PROFILE_MARKER="# >>> vm-setup-profile >>>"
+PROFILE_END_MARKER="# <<< vm-setup-profile <<<"
 
 echo "=========================================="
 echo "Setting Up Bash Profile & MOTD"
@@ -15,15 +19,26 @@ if [ -z "$MOTD_TITLE" ]; then
     MOTD_TITLE="AI Development Environment"
 fi
 
-# Create aliases file
+# Clean up legacy entries from old versions of this script
 echo ""
-echo "Creating AI CLI aliases..."
+echo "Cleaning up old entries..."
+sed -i '/# Load AI CLI aliases/d' ~/.bashrc 2>/dev/null || true
+sed -i '/\.bash_ai_aliases/d' ~/.bashrc 2>/dev/null || true
+sed -i '/# Display custom MOTD/d' ~/.bashrc 2>/dev/null || true
+sed -i '/cat ~\/.motd/d' ~/.bashrc 2>/dev/null || true
+rm -f ~/.motd ~/.bash_ai_aliases 2>/dev/null || true
 
-ALIAS_FILE="$HOME/.bash_ai_aliases"
+# Remove existing profile block if present
+sed -i "/$PROFILE_MARKER/,/$PROFILE_END_MARKER/d" ~/.bashrc 2>/dev/null || true
 
-cat > "$ALIAS_FILE" << 'EOF'
-# AI CLI Quick Commands (YOLO modes)
-# These bypass permission checks - use responsibly!
+# Create the profile block
+echo ""
+echo "Creating bash profile..."
+
+cat >> ~/.bashrc << 'EOF'
+
+# >>> vm-setup-profile >>>
+# AI CLI Quick Commands (YOLO modes) - managed by vm-setup/setup-profile.sh
 
 # Claude Code - dangerously skip permissions
 alias ccyo='claude --dangerously-skip-permissions'
@@ -34,19 +49,12 @@ alias coyo='gh copilot --allow-all-tools'
 # Gemini CLI - yolo mode
 alias ggyo='gemini --yolo'
 
-# OpenAI Codex CLI - yolo mode (bypass approvals and sandbox)
+# OpenAI Codex CLI - yolo mode
 alias cxyo='codex --yolo'
+# <<< vm-setup-profile <<<
 EOF
 
-# Add source to .bashrc if not already there
-if ! grep -q '.bash_ai_aliases' ~/.bashrc; then
-    echo "" >> ~/.bashrc
-    echo "# Load AI CLI aliases" >> ~/.bashrc
-    echo "[ -f ~/.bash_ai_aliases ] && source ~/.bash_ai_aliases" >> ~/.bashrc
-    echo "Aliases added to ~/.bashrc"
-else
-    echo "Aliases already sourced in ~/.bashrc"
-fi
+echo "Profile block added to ~/.bashrc"
 
 # Create MOTD
 echo ""
