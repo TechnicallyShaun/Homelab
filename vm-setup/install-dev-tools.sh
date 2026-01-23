@@ -1,5 +1,5 @@
 #!/bin/bash
-# Install Development Tools: Go and GitHub CLI
+# Install Development Tools: Go, GitHub CLI, tmux, and Git config
 
 set -e
 
@@ -7,9 +7,23 @@ echo "=========================================="
 echo "Installing Development Tools"
 echo "=========================================="
 
+# Git config
+echo ""
+echo "[1/4] Configuring Git..."
+git config --global user.name "Shaun"
+git config --global user.email "me@technicallyshaun.com"
+echo "Git configured: Shaun <me@technicallyshaun.com>"
+
+# tmux
+echo ""
+echo "[2/4] Installing/updating tmux..."
+sudo apt update -qq
+sudo apt install -y tmux
+echo "tmux installed: $(tmux -V)"
+
 # Go
 echo ""
-echo "[1/2] Installing Go..."
+echo "[3/4] Installing Go..."
 if command -v go &> /dev/null; then
     echo "Go already installed: $(go version)"
 else
@@ -29,7 +43,7 @@ fi
 
 # GitHub CLI
 echo ""
-echo "[2/2] Installing GitHub CLI..."
+echo "[4/4] Installing GitHub CLI..."
 if command -v gh &> /dev/null; then
     echo "GitHub CLI already installed: $(gh --version | head -1)"
 else
@@ -48,7 +62,9 @@ echo "=========================================="
 echo "Development Tools Installation Complete!"
 echo "=========================================="
 echo ""
-echo "Installed tools:"
+echo "Configured/Installed:"
+echo "  - git (configured as Shaun <me@technicallyshaun.com>)"
+echo "  - tmux (terminal multiplexer)"
 echo "  - go (Go programming language)"
 echo "  - gh (GitHub CLI)"
 echo ""
