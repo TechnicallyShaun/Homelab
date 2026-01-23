@@ -1,10 +1,9 @@
-# VM Setup
+<h1 align="center">🖥️ VM Setup</h1>
+<p align="center">Scripts for quickly provisioning a new development VM with AI CLI tools</p>
 
-Scripts for quickly provisioning a new development VM with AI CLI tools.
+---
 
-## Usage
-
-### Run Remotely
+## Run Remotely
 
 ```bash
 # 1. Install dev tools (Go, GitHub CLI, tmux, git config)
@@ -17,7 +16,7 @@ curl -fsSL https://raw.githubusercontent.com/TechnicallyShaun/Homelab/main/vm-se
 curl -fsSL https://raw.githubusercontent.com/TechnicallyShaun/Homelab/main/vm-setup/setup-profile.sh -o /tmp/setup-profile.sh && bash /tmp/setup-profile.sh
 ```
 
-### Run Locally
+## Run Locally
 
 ```bash
 git clone git@github.com:TechnicallyShaun/Homelab.git
@@ -27,12 +26,14 @@ cd Homelab/vm-setup
 ./setup-profile.sh
 ```
 
-## YOLO Mode Aliases
+---
+
+## ⚡ YOLO Mode Aliases
 
 After running `setup-profile.sh`:
 
 | Alias | Command |
-|-------|---------|
+|:------|:--------|
 | `ccyo` | `claude --dangerously-skip-permissions` |
 | `coyo` | `gh copilot --allow-all-tools` |
 | `ggyo` | `gemini --yolo` |
