@@ -75,16 +75,6 @@ EOF
 # Write MOTD to /etc/motd (requires sudo)
 echo "$MOTD_CONTENT" | sudo tee /etc/motd > /dev/null
 
-# Also create a user-level MOTD in case /etc/motd doesn't work
-echo "$MOTD_CONTENT" > "$HOME/.motd"
-
-# Add to .bashrc to show on login if system MOTD doesn't display
-if ! grep -q 'cat ~/.motd' ~/.bashrc; then
-    echo "" >> ~/.bashrc
-    echo "# Display custom MOTD" >> ~/.bashrc
-    echo "[ -f ~/.motd ] && cat ~/.motd" >> ~/.bashrc
-fi
-
 echo ""
 echo "=========================================="
 echo "Setup Complete!"
