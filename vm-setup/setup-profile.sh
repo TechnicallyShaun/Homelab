@@ -63,8 +63,9 @@ echo "Configuring MOTD..."
 # Disable all default MOTD scripts
 sudo chmod -x /etc/update-motd.d/* 2>/dev/null || true
 
-# Clear static motd
-sudo truncate -s 0 /etc/motd 2>/dev/null || true
+# Clear all static motd files
+sudo rm -f /etc/motd /etc/motd.tail /run/motd.dynamic 2>/dev/null || true
+sudo touch /etc/motd
 
 # Create our custom MOTD script
 sudo tee /etc/update-motd.d/00-custom > /dev/null << MOTDSCRIPT
